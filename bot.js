@@ -1,8 +1,15 @@
-const Discord = require('discord.js'); 
+const Discord = require("discord.js");
 const client = new Discord.Client();
+client.on('ready', () => {
+  client.user.setGame(` By Suhaib #4272 .`,'https://www.twitch.tv/v5bz');
+  console.log('---------------');
+  console.log('Desert Bot Is Online')
+  console.log('---------------')
+});
 const Sra7a = [
      'صراحه  |  صوتك حلو؟',
      'صراحه  |  التقيت الناس مع وجوهين؟',
+     'صراحه  |  شيء وكنت تحقق اللسان؟',
      'صراحه  |  أنا شخص ضعيف عندما؟',
      'صراحه  |  هل ترغب في إظهار حبك ومرفق لشخص أو رؤية هذا الضعف؟',
      'صراحه  |  يدل على أن الكذب مرات تكون ضرورية شي؟',
@@ -133,7 +140,7 @@ const Za7f = [
 
 
  client.on('message', message => {
-   if (message.content.startsWith("%عقاب")) {
+   if (message.content.startsWith("%حكم")) {
                 if(!message.channel.guild) return message.reply('** This command only for servers**');
   var embed = new Discord.RichEmbed()
   .setColor('RANDOM')
@@ -360,9 +367,8 @@ const R = [
    '*** تتصل على الوالده  و تقول لها خطفت شخص. ***',
    '*** روح اكل ملح + ليمون اذا مافيه اكل اي شيء من اختيار الي معك.  ***'
 ]
- client.on('message', message => {
-   var prefix = '%';
- if (message.content.startsWith(prefix + 'حكم')) {
+ client.on('message', function(message) {
+ if (message.content.startsWith('%حكم')) {
   var mariam= new Discord.RichEmbed()
   .setTitle("لعبة حكم ..")
   .setColor('RANDOM')
@@ -371,4 +377,4 @@ const R = [
    message.react(":thinking:")
   }
 });
-client.login('BOT_TOKEN');
+client.login("NDY2Nzc0MzI1Mzc5MzM0MTQ1.Dig9BQ.9w9bB0XMw--h310nv1Or_v_sAbA");
