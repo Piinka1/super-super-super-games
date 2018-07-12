@@ -142,7 +142,7 @@ const challenge = [
  client.on('message', message => {
    if (message.content.startsWith("%عقاب")) {
                 if(!message.channel.guild) return message.reply('** This command only for servers**');
-  var embed = new Discord.RichEmbed()
+  var mariam= new Discord.RichEmbed()
   .setColor('RANDOM')
   .setThumbnail(message.author.avatarURL) 
   .addField('R Bot' ,
