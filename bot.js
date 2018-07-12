@@ -140,7 +140,7 @@ const Za7f = [
 
 
  client.on('message', message => {
-   if (message.content.startsWith("%حكم")) {
+   if (message.content.startsWith("%عقاب")) {
                 if(!message.channel.guild) return message.reply('** This command only for servers**');
   var embed = new Discord.RichEmbed()
   .setColor('RANDOM')
@@ -367,8 +367,9 @@ const R = [
    '*** تتصل على الوالده  و تقول لها خطفت شخص. ***',
    '*** روح اكل ملح + ليمون اذا مافيه اكل اي شيء من اختيار الي معك.  ***'
 ]
- client.on('message', function(message) {
- if (message.content.startsWith('%حكم')) {
+ client.on('message', message => {
+   var prefix = '%';
+ if (message.content.startsWith(prefix + 'حكم')) {
   var mariam= new Discord.RichEmbed()
   .setTitle("لعبة حكم ..")
   .setColor('RANDOM')
