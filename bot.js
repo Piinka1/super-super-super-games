@@ -1,7 +1,5 @@
 const Discord = require('discord.js'); 
 const client = new Discord.Client();
-
-
 const Sra7a = [
      'صراحه  |  صوتك حلو؟',
      'صراحه  |  التقيت الناس مع وجوهين؟',
@@ -374,5 +372,4 @@ const R = [
    message.react(":thinking:")
   }
 });
-
 client.login('BOT_TOKEN');
