@@ -341,7 +341,7 @@ client.on('message', function(message) {
 });
 
 
-const R = [
+const hkma = [
    '*** منشن الجميع وقل انا اكرهكم. ***',
 '*** اتصل على امك و قول لها انك تحبها :heart:. ***',
    '***     تصل على الوالده  و تقول لها  احب وحده.***',
@@ -368,12 +368,11 @@ const R = [
    '*** روح اكل ملح + ليمون اذا مافيه اكل اي شيء من اختيار الي معك.  ***'
 ]
  client.on('message', message => {
-   var prefix = '%';
- if (message.content.startsWith(prefix + 'حكم')) {
+ if (message.content.startsWith('%hkma')) {
   var mariam= new Discord.RichEmbed()
   .setTitle("لعبة حكم ..")
   .setColor('RANDOM')
-  .setDescription(`${R[MRor(Math.random() * R.length)]}`)
+  .setDescription(`${hkma[Math.floor(Math.random() * hkma.length)]}`)
    message.channel.sendEmbed(mariam);
    message.react(":thinking:")
   }
