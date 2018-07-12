@@ -146,7 +146,6 @@ const Za7f = [
   .setTitle("لعبة challenge ..")
   .setColor('RANDOM')
   .setDescription(`${Za7f[Math.floor(Math.random() * Za7f.length)]}`)
-   console.log('[38ab] Send By: ' + message.author.username)
                   .setTimestamp()
 
    message.channel.sendEmbed(client);
