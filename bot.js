@@ -83,7 +83,7 @@ const Sra7a = [
 });
 
 
-const challenge = [
+const Za7f = [
     "**صورة وجهك او رجلك او خشمك او يدك**.",
     "**اصدر اي صوت يطلبه منك الاعبين**.",
     "**سكر خشمك و قول كلمة من اختيار الاعبين الي معك**.",
@@ -142,11 +142,11 @@ const challenge = [
  client.on('message', message => {
    if (message.content.startsWith("%عقاب")) {
                 if(!message.channel.guild) return message.reply('** This command only for servers**');
-  var mariam= new Discord.RichEmbed()
+  var embed = new Discord.RichEmbed()
   .setColor('RANDOM')
-  .setThumbnail(message.author.avatarURL) 
-  .addField('R Bot' ,
-   .setDescription(`${challenge[Math.floor(Math.random() * challenge.length)]}`)
+   .setThumbnail(message.author.avatarURL) 
+ .addField('R Bot' ,
+  `${Za7f[Math.floor(Math.random() * Za7f.length)]}`)
   message.channel.sendEmbed(embed);
   console.log('[38ab] Send By: ' + message.author.username)
     }
