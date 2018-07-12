@@ -146,7 +146,7 @@ const Za7f = [
   .setTitle("لعبة challenge ..")
   .setColor('RANDOM')
   .setDescription(`${Za7f[Math.floor(Math.random() * Za7f.length)]}`)
-  .setImage("https://cdn.discordapp.com/attachments/371269161470525444/384103927060234242/125.png")
+  .console.log('[38ab] Send By: ' + message.author.username)
                   .setTimestamp()
 
    message.channel.sendEmbed(client);
