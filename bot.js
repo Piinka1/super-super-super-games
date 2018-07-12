@@ -139,16 +139,18 @@ const Za7f = [
 ]
 
 
- client.on('message', message => {
-   if (message.content.startsWith("%عقاب")) {
-                if(!message.channel.guild) return message.reply('** This command only for servers**');
-  var mariam = new Discord.RichEmbed()
+  client.on('message', message => {
+ if (message.content.startsWith('%challenge')) {
+     if(!message.channel.guild) return message.reply('** This command only for servers **');
+  var client= new Discord.RichEmbed()
+  .setTitle("لعبة challenge ..")
   .setColor('RANDOM')
-   .setThumbnail(message.author.avatarURL) 
- .addField('R Bot' ,
-  `${Za7f[Math.floor(Math.random() * Za7f.length)]}`)
-  message.channel.sendEmbed(embed);
-  console.log('[38ab] Send By: ' + message.author.username)
+  .setDescription(`${Za7f[Math.floor(Math.random() * Za7f.length)]}`)
+  .setImage("https://cdn.discordapp.com/attachments/371269161470525444/384103927060234242/125.png")
+                  .setTimestamp()
+
+   message.channel.sendEmbed(client);
+   message.react(":joy:")
     }
 });
 
